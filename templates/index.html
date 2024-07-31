@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Score Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <h1>Credit Score Prediction</h1>
+    <form action="/Prediction" method="post">
+        <h3>Enter the below customer details </h3>
+
+        <fieldset>
+
+            <label for="Annual Income">Annual Income</label>
+            <input type="text" id="Annual Income" name="Annual Income" required>
+
+            <label for="Amount Invested Monthly">Amount Invested Monthly</label>
+            <input type="text" id="Amount Invested Monthly" name="Amount Invested Monthly" required>
+
+            <label for="Total EMI Per Month">Total EMI Per Month</label>
+            <input type="text" id="Total EMI Per Month" name="Total EMI Per Month" required>
+
+            <label for="Outstanding Debt">Outstanding Debt</label>
+            <input type="text" id="Outstanding Debt" name="Outstanding Debt" required>
+
+            <label for="Interest Rate">Interest Rate</label>
+            <input type="number" id="Interest Rate" name="Interest Rate" required>
+
+            <label for="Number of Credit Cards">Number of Credit Cards</label>
+            <input type="number" id="Number of Credit Cards" name="Number of Credit Cards" required>
+            
+            <label for="Number of Credit Inquiries">Number of Credit Inquiries</label>
+            <input type="number" id="Number of Credit Inquiries" name="Number of Credit Inquiries" required>
+            
+            <label for="Credit Mix">Credit Mix</label>
+            <select id="Credit Mix" name="Credit Mix" required>
+                <option hidden disabled selected value>Select</option>
+                <option value="Bad">Bad</option>
+                <option value="Good">Good</option>
+                <option value="Standard">Standard</option>
+            </select>
+  
+        </fieldset>
+
+        <button type="submit">Predict</button>
+
+    </form>
+</body>
+
+</html>
